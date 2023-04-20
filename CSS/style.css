@@ -149,21 +149,19 @@
   align-items: flex-end;
 }
 
-.trends__one {
+.trends__many {
   display: flex;
-  width: calc(25% - 4.5px);
-  height: 100%;
-  min-height: 320px;
-  background: #000;
-  background-image: url(../Images/trend1.jpg);
-  background-size: cover;
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 15px;
   position: relative;
+  width: calc(25% - 4.5px);
+  height: 100%;
+  min-height: 320px;
+  background: #000;
 }
 
-.trends__one:before {
+.trends__many:before {
   content: '';
   display: block;
   position: absolute;
@@ -172,81 +170,26 @@
   right: 0;
   bottom: 0;
   background-color:rgba(0, 0, 0, .6);
+}
+
+.trends__one {
+  background-image: url(../Images/trend1.jpg);
+  background-size: cover;
 }
 
 .trends__two {
-  display: flex;
-  width: calc(25% - 4.5px);
-  height: 100%;
-  min-height: 320px;
-  background: #000;
   background-image: url(../Images/trend2.jpg);
   background-size: cover;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 15px;
-  position: relative;
-}
-
-.trends__two:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color:rgba(0, 0, 0, .6);
 }
 
 .trends__three {
-  display: flex;
-  width: calc(25% - 4.5px);
-  height: 100%;
-  min-height: 320px;
-  background: #000;
   background-image: url(../Images/trend3.jpg);
   background-size: cover;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 15px;
-  position: relative;
-}
-
-.trends__three:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color:rgba(0, 0, 0, .6);
 }
 
 .trends__four {
-  display: flex;
-  width: calc(25% - 4.5px);
-  height: 100%;
-  min-height: 320px;
-  background: #000;
   background-image: url(../Images/trend4.jpg);
   background-size: cover;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 15px;
-  position: relative;
-}
-
-.trends__four:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color:rgba(0, 0, 0, .6);
 }
 
 .div {
@@ -261,14 +204,17 @@
 
 .trends__title {
   width:  364px;
+}
+
+.trends__link {
   font-size: 20px;
   line-height: 24px;
   color: #ffffff;
   font-weight: 700;
   font-family: "Open Sans";
   text-transform: uppercase;
+  text-decoration: none;
 }
-
 
 /*news*/
 .news {
@@ -688,13 +634,7 @@
 }
 
 .button__products {
-  width: 140px;
-  height: 48px;
-  margin-top: 16px;
   background-color: #b59f5b;
-  position: relative;
-  top: 0;
-  right: 0;
   cursor: pointer;
   border: none;
   font-size: 14px;
@@ -702,13 +642,20 @@
   color: #ffffff;
   font-weight: 700;
   outline: none;
+  text-decoration: none;
+  padding: 20px 30px;
 }
 
 .button__products:hover {
-  width: 140px;
-  height: 48px;
   background-color: #323232;
 }
+
+.button__buy {
+  display: flex;
+  align-items: baseline;
+  margin-top: 27px;
+}
+
 
 /*footer*/
 .footer {
@@ -915,7 +862,7 @@
 
 
 /*media*/
-@media (max-width: 360px) {
+@media (max-width: 640px) {
   .header {
     background-image: url(../Images/banner-mobile.jpg);
   }
@@ -957,7 +904,7 @@
     width: 100%;
   }
 
-  .trends__title {
+  .trends__link {
     font-size: 16px;
     width: 100%;
   }
@@ -1129,7 +1076,7 @@
 
 }
 
-@media (min-width: 361px) and (max-width: 768px) and (orientation: portrait) {
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
   .header {
     background-image: url(../Images/banner-bg-tablet.jpg);
   }
@@ -1150,7 +1097,7 @@
     width: 50%;
   }
 
-  .trends__title {
+  .trends__link {
     font-size: 0.9rem;
     width: 90%
   }
