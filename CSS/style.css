@@ -108,7 +108,8 @@
 }
 
 .title {
-  width: 688px;
+  width: 100%;
+  max-width: 688px;
   margin: 126px auto 0;
   text-align: center;
   font-family: Open sans, sans-serif;
@@ -203,7 +204,9 @@
 }
 
 .trends__title {
-  width:  364px;
+  width: 100%;
+  max-width:  364px;
+  
 }
 
 .trends__link {
@@ -245,7 +248,8 @@
 }
 
 .image-link {
-  width: 382px;
+  width: 100%;
+  max-width: 382px;
 }
 
 .link-list {
@@ -297,7 +301,8 @@
 
 .post-text {
   font-family: open sans;
-  width: 367px;
+  max-width: 367px;
+  width: 100%;
   font-size: 15px;
   line-height: 1.2;
   color: #0f0d0e;
@@ -570,6 +575,8 @@
 
 .top__products {
   width: calc(33.33% - 90px);
+  display: flex;
+  flex-direction: column;
 }
 
 .top__products:nth-child(1),
@@ -735,13 +742,26 @@
 
 
 /*popup*/
+.popup:before {
+  content: '';
+  background: #000;
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  opacity: 0.7;
+  z-index: 100;
+}
+
 .popup {
   width: 390px;
-  height: 596px;
   background-color: #ffffff;
   margin: 0 auto;
   padding: 0 30px;
-  display: none;
+  display: flex;
+  position: fixed;
+  z-index: 200;
 }
 
 .close {
@@ -778,7 +798,7 @@
   content: "";
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 330px;
+  width: 100%;
   height: 48px;
   background-color: #f4f7f6;
   appearance:none;
@@ -840,7 +860,7 @@
 
 
 .survey__popup {
-  width: 330px;
+  width: 100%;
   height: 131px;
   background-color: #f4f7f6;
   border: none;
@@ -889,7 +909,6 @@
   }
 
   .title {
-  width: 280px;
   margin: 45px auto 220px;
   text-align: center;
   font-weight: 700;
@@ -905,22 +924,17 @@
   }
 
   .trends__link {
-    font-size: 16px;
     width: 100%;
   }
-
+ 
   .div {
-    max-width: 326px;
-    padding-bottom: 30px;
-    padding-left: 22px;
-    padding-top: 32px;
+    width: 90%;
   }
 
   .news {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    max-width: 360px;
+    max-width: 100%;
   }
 
   .post {
@@ -931,7 +945,6 @@
   .post:before {
     content: "";
     display: block;
-    width: 329px;
     height: 3px;
     background-color: #eeeeee; 
     margin-bottom: 36px;
@@ -946,7 +959,7 @@
   }
 
   .image-link {
-    width: 330px;
+    max-width: 100%;
     margin-bottom: 20px;
   }
 
@@ -956,7 +969,7 @@
   }
 
   .post-text {
-    width: 328px;
+    width: 100%;
     height: 69px;
     font-size: 14px;
     line-height: 20px;
@@ -975,8 +988,7 @@
   }
 
   .addit {
-    width: 100%;
-    max-width: 330px;
+    max-width: 100%;
   }
 
   .form-one {
@@ -1002,7 +1014,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 330px;
     margin: 0 auto;
   }
 
@@ -1010,14 +1021,16 @@
     width: 100%;
   }
 
+  .img__products {
+    text-align: center;
+  }
+
   .top__products:nth-child(1),
   .top__products:nth-child(2) {
     margin-bottom: 50px;
   }
 
-  .img__products {
-    width: 280px;
-  }
+ 
 
   .text__products {
     outline-offset: 10px;
@@ -1026,14 +1039,12 @@
 
   .footer {
     width: 100%;
-    max-width: 330px;
     padding: 0 15px;
 
   }
 
   .social {
     width: 100%;
-    max-width: 330px;
     display: flex;
   }
 
@@ -1043,7 +1054,7 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    left: 90px;
+    left: 220px;
     top: 32px;
     background: no-repeat center center;
     background-image: url(../svg/001-dribbble.svg);
@@ -1055,7 +1066,7 @@
     position: absolute;
     width: 16px;
     height: 20px;
-    left: 145px;
+    left: 275px;
     top: 32px;
     background: no-repeat center center;
     background-image: url(../svg/002-pinterest.svg);
@@ -1067,7 +1078,7 @@
     position: absolute;
     width: 16px;
     height: 20px;
-    left: 200px;
+    left: 330px;
     top: 32px;
     background: no-repeat center center;
     background-image: url(../svg/003-tumblr.svg);
@@ -1076,7 +1087,7 @@
 
 }
 
-@media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
+@media (min-width: 641px) and (max-width: 1200px) {
   .header {
     background-image: url(../Images/banner-bg-tablet.jpg);
   }
@@ -1121,7 +1132,6 @@
   }
 
   .our__products {
-    max-width: 768px;
     display: flex;
     flex-wrap: wrap;
     padding: 0 55px;
@@ -1132,6 +1142,10 @@
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
+  }
+
+  .top__products:nth-child(3) {
+    margin-top: 75px;
   }
 
   .footer {
